@@ -1,4 +1,4 @@
-<PEPSOL>
+<PepSol>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,59 +57,42 @@
             border-radius: 5px;
         }
 
-        .image-gallery {
+        .circle-gallery {
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
             display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
 
-        .left-side, .right-side {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: 20px;
-        }
-
-        .left-side img, .right-side img {
-            border-radius: 10px;
-            width: 100%;
+        .circle-gallery img {
+            position: absolute;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
+            border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
-        .left-side img:hover, .right-side img:hover {
-            transform: scale(1.05);
-        }
+        /* Position images in a circular layout */
+        .circle-gallery img:nth-child(1) { transform: rotate(0deg) translateX(180px) rotate(0deg); }
+        .circle-gallery img:nth-child(2) { transform: rotate(30deg) translateX(180px) rotate(-30deg); }
+        .circle-gallery img:nth-child(3) { transform: rotate(60deg) translateX(180px) rotate(-60deg); }
+        .circle-gallery img:nth-child(4) { transform: rotate(90deg) translateX(180px) rotate(-90deg); }
+        .circle-gallery img:nth-child(5) { transform: rotate(120deg) translateX(180px) rotate(-120deg); }
+        .circle-gallery img:nth-child(6) { transform: rotate(150deg) translateX(180px) rotate(-150deg); }
+        .circle-gallery img:nth-child(7) { transform: rotate(180deg) translateX(180px) rotate(-180deg); }
+        .circle-gallery img:nth-child(8) { transform: rotate(210deg) translateX(180px) rotate(-210deg); }
+        .circle-gallery img:nth-child(9) { transform: rotate(240deg) translateX(180px) rotate(-240deg); }
+        .circle-gallery img:nth-child(10) { transform: rotate(270deg) translateX(180px) rotate(-270deg); }
+        .circle-gallery img:nth-child(11) { transform: rotate(300deg) translateX(180px) rotate(-300deg); }
 
-        .left-side img:nth-child(1) {
-            height: 200px;
-        }
-
-        .left-side img:nth-child(2) {
-            height: 250px;
-        }
-
-        .left-side img:nth-child(3) {
-            height: 300px;
-        }
-
-        .right-side img:nth-child(1) {
-            height: 200px;
-        }
-
-        .right-side img:nth-child(2) {
-            height: 250px;
-        }
-
-        .right-side img:nth-child(3) {
-            height: 300px;
-        }
     </style>
 </head>
 <body>
@@ -133,19 +116,19 @@
     <input type="text" id="crypto-address" placeholder="Enter your Solana address here">
 </div>
 
-<div class="image-gallery">
-    <div class="left-side">
-        <!-- Placeholder images for the left side -->
-        <img src="https://via.placeholder.com/200x200/00FFA3/ffffff?text=SOLPEPE" alt="SOLPEPE Image 1">
-        <img src="https://via.placeholder.com/250x250/9945FF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 2">
-        <img src="https://via.placeholder.com/300x300/DC1FFF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 3">
-    </div>
-    <div class="right-side">
-        <!-- Placeholder images for the right side -->
-        <img src="https://via.placeholder.com/200x200/00FFA3/ffffff?text=SOLPEPE" alt="SOLPEPE Image 4">
-        <img src="https://via.placeholder.com/250x250/9945FF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 5">
-        <img src="https://via.placeholder.com/300x300/DC1FFF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 6">
-    </div>
+<div class="circle-gallery">
+    <!-- All images will be the same source (purplepepesol1.jpg) -->
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 1">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 2">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 3">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 4">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 5">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 6">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 7">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 8">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 9">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 10">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 11">
 </div>
 
 </body>
