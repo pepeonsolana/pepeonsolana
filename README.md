@@ -34,6 +34,7 @@
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             font-size: 1.2rem;
+            z-index: 2; /* Ensure the text stays on top */
         }
 
         .crypto-address-box {
@@ -57,41 +58,54 @@
             border-radius: 5px;
         }
 
-        .circle-gallery {
+        .image-gallery {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
+            flex-wrap: wrap;
+            gap: 30px;
+            z-index: 1; /* Place images below text */
         }
 
-        .circle-gallery img {
-            position: absolute;
-            width: 100px;
-            height: 100px;
+        .image-gallery img {
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
-        /* Position images in a circular layout */
-        .circle-gallery img:nth-child(1) { transform: rotate(0deg) translateX(180px) rotate(0deg); }
-        .circle-gallery img:nth-child(2) { transform: rotate(30deg) translateX(180px) rotate(-30deg); }
-        .circle-gallery img:nth-child(3) { transform: rotate(60deg) translateX(180px) rotate(-60deg); }
-        .circle-gallery img:nth-child(4) { transform: rotate(90deg) translateX(180px) rotate(-90deg); }
-        .circle-gallery img:nth-child(5) { transform: rotate(120deg) translateX(180px) rotate(-120deg); }
-        .circle-gallery img:nth-child(6) { transform: rotate(150deg) translateX(180px) rotate(-150deg); }
-        .circle-gallery img:nth-child(7) { transform: rotate(180deg) translateX(180px) rotate(-180deg); }
-        .circle-gallery img:nth-child(8) { transform: rotate(210deg) translateX(180px) rotate(-210deg); }
-        .circle-gallery img:nth-child(9) { transform: rotate(240deg) translateX(180px) rotate(-240deg); }
-        .circle-gallery img:nth-child(10) { transform: rotate(270deg) translateX(180px) rotate(-270deg); }
-        .circle-gallery img:nth-child(11) { transform: rotate(300deg) translateX(180px) rotate(-300deg); }
+        /* Image positioning */
+        .left {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .right {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
 
     </style>
 </head>
@@ -116,19 +130,15 @@
     <input type="text" id="crypto-address" placeholder="Enter your Solana address here">
 </div>
 
-<div class="circle-gallery">
-    <!-- All images will be the same source (purplepepesol1.jpg) -->
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 1">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 2">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 3">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 4">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 5">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 6">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 7">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 8">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 9">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 10">
-    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 11">
+<div class="image-gallery">
+    <!-- 7 images positioned around the text -->
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 1" class="left">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 2" class="right">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 3" class="bottom">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 4" class="left">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 5" class="right">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 6" class="bottom">
+    <img src="purplepepesol1.jpg" alt="SOLPEPE Image 7" class="bottom">
 </div>
 
 </body>
