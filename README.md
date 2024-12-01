@@ -13,6 +13,8 @@
             background: linear-gradient(to right, #00FFA3, #DC1FFF, #9945FF);
             color: white;
             text-align: center;
+            position: relative;
+            height: 100vh;
         }
 
         header {
@@ -32,19 +34,24 @@
         }
 
         .image-gallery {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            bottom: 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
+            align-items: flex-start;
+            gap: 10px;
+            pointer-events: none;
         }
 
         .image-gallery img {
             border-radius: 10px;
             transition: transform 0.3s ease;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.1);
+            position: absolute;
+            pointer-events: auto;
         }
 
         .crypto-address-box {
@@ -79,18 +86,9 @@
 </div>
 
 <div class="image-gallery">
-    <img src="https://via.placeholder.com/200x200/00FFA3/ffffff?text=SOLPEPE" alt="SOLPEPE Image 1" width="200" height="200">
-    <img src="https://via.placeholder.com/300x300/9945FF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 2" width="300" height="300">
-    <img src="https://via.placeholder.com/250x250/DC1FFF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 3" width="250" height="250">
-    <img src="https://via.placeholder.com/400x200/00FFA3/ffffff?text=SOLPEPE" alt="SOLPEPE Image 4" width="400" height="200">
-    <img src="https://via.placeholder.com/300x500/9945FF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 5" width="300" height="500">
-    <img src="https://via.placeholder.com/250x300/DC1FFF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 6" width="250" height="300">
-</div>
-
-<div class="crypto-address-box">
-    <label for="crypto-address">Enter your crypto address:</label>
-    <input type="text" id="crypto-address" placeholder="Enter your Solana address here">
-</div>
-
-</body>
-</html>
+    <!-- Images will be randomly placed by JavaScript -->
+    <img src="https://via.placeholder.com/200x200/00FFA3/ffffff?text=SOLPEPE" alt="SOLPEPE Image 1" class="random-image" width="200" height="200">
+    <img src="https://via.placeholder.com/300x300/9945FF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 2" class="random-image" width="300" height="300">
+    <img src="https://via.placeholder.com/250x250/DC1FFF/ffffff?text=SOLPEPE" alt="SOLPEPE Image 3" class="random-image" width="250" height="250">
+    <img src="https://via.placeholder.com/400x200/00FFA3/ffffff?text=SOLPEPE" alt="SOLPEPE Image 4" class="random-image" width="400" height="200">
+    <img src="https://via.placeholder.com/
