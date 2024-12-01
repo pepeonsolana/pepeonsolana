@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solana Meme Coin</title>
+  <style>
+    /* Inline CSS for simplicity */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #00FFA3, #DC1FFF); /* Replace with your colors */
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    p {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Solana Meme Coin!</h1>
+  <p>Your description goes here. Share the story of your meme coin, its purpose, and what makes it unique!</p>
+  <div>
+    <!-- Replace with your actual image filenames -->
+    <img src="image1.png" alt="Meme Image 1">
+    <img src="image2.png" alt="Meme Image 2">
+  </div>
+</body>
+</html>
